@@ -1,0 +1,38 @@
+{% extends 'restaurant/base.html' %}
+
+{% load static %}
+{% block content %} 
+<section class="menu-filter">
+    <div class="menu-filter-options">
+        <ul>
+          <li><a href='{% url "menu" %}' class="filter-option">All</a></li>
+          <li><a href='{% url "category" "Appetizers" %}' class="filter-option">Appetizers</a></li>
+          <li><a href='{% url "category" "Snacks" %}' class="filter-option">Snacks</a></li>
+          <li><a href='{% url "category" "Soups & Salads" %}' class="filter-option">Soups & Salads </a></li>
+          <li><a href='{% url "category" "Pizzas" %}' class="filter-option">Pizzas</a></li>
+          <li><a href='{% url "category" "Sandwiches" %}' class="filter-option">Sandwiches</a></li>
+          <li><a href='{% url "category" "Steaks & Seafood" %}' class="filter-option">Steaks & Seafood</a></li>
+          <li><a href='{% url "category" "Desserts" %}' class="filter-option">Desserts</a></li>
+          <li><a href='{% url "category" "Drinks" %}' class="filter-option">Drinks</a></li>
+        </ul>
+    </div>
+</section>
+
+<section  class="flexbox-menu">
+
+    {%for meal in menu_item%}
+    <div class="menu-wrapper flex-menu-item">
+        <div class="dish-img">
+            <span class="menu-list-product"><img src="{{meal.mealPicture}}" alt="" > </span>
+        </div> 
+        <div class="menu-list">
+            <h5>{{meal.mealName}} <span>$ {{meal.price}}</span></h5>
+            <p> <strong>{{meal.mealDescription}} </strong></p>
+            <span> {{meal.calories}} cal </span>
+        </div> 
+    </div>
+    {% endfor %}
+    
+</section>
+
+{% endblock %}

@@ -1,0 +1,210 @@
+{% extends 'restaurant/base.html' %}
+{% load static %}
+{% block content %} 
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+  padding: 8px;
+  border: none;
+
+  color: white;
+  background-color: #000;
+
+}
+
+.about-section {
+  padding: 8px;
+  text-align: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.title {
+  color: rgb(0, 0, 0);
+}
+.img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+  height: 180px;
+  
+}
+
+
+.card:hover {
+  background-color: rgb(248, 214, 103);
+}
+
+
+</style>
+</style>
+<body>
+  <div class="about-section">
+    <h1> Our Website</h1> 
+    <p><b>A website where you can make a reservation in your favorite restaurant without waiting in line - Using django/Pyhonah <b></p>
+    <br>
+ 
+    </div>
+    <h2 style="text-align:center">Fire & Sparks Team</h2>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+
+    <div class="w3-quarter">
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+      <img src="https://i.ibb.co/vXS8W7t/personal-photo.jpg" class="img">
+      <h3>Abdullah Alhabdani</h3>
+ 
+    
+      <p class="title">Computer & software Engineer</p>
+   <p> I try to find a challenge<br>
+  in Cyber Security field, continue<br>
+  solving problems and  I intend<br> 
+  to learn new thing every day  </p>
+  <p>Email : a.a.alhabdani@gmail.com</p>
+  <p>phone Number : +966501610056</p>
+  </li>
+  </ul>
+    </div>
+    <div class="w3-quarter">
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+      <img class="img" src="https://i.ibb.co/8gjw158/ME.jpg" >
+      <h3>Muath Aloufi</h3>
+      <p class="title">Software Engineer</p>  
+        <p> Has always been inspired by the <br>
+        work IT professionals do, especially<br>
+        when it comes to creating and developing<br> 
+        software solutions and products.  </p>
+        <p>Email : moudaloufi@gmail.com</p>
+        <p>phone Number : +966552268884</p>
+        </li>
+        </ul>
+    </div>
+    <div class="w3-quarter">
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+      <img class="img" src="https://i.ibb.co/8Ng6wZw/Whats-App-Image-2021-02-17-at-7-50-07-PM.jpg">
+      <h3>Mariam Ghazwani</h3>
+      <p class="title">Cyber Security Specialist</p>
+      <p> Committed to learne, face challenges<br>
+        in Cyber Security field, continue<br>
+        troubleshooting, generating <br> 
+        solutions, editing tools and supporting  </p>
+          <p>Email : g2030mariam@gmail.com</p>
+      <p>phone Number : +966580199499</p>
+      </li>
+      </ul>
+    </div>
+    <div class="w3-quarter">
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+      <img  class="img" src="https://i.ibb.co/Dk93BmB/Image-from-i-OS.jpg">
+      <h3>Manal Alghamdi</h3>
+      <p class="title">Full-stack Developer</p>
+      <p> Technology-oriented and Enjoys<br>
+        developing websites more<br>
+        efficient &user-friendly <br> 
+        editing tools and supporting  </p>
+        <p>Email : manalalghamdi0@gmail.com</p>
+      <p>phone Number : +966532528168</p>
+      </li>
+      </ul>
+  
+    </div>
+  </div>
+  
+  <!-- Pagination -->
+ 
+  
+  <hr id="about">
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-center">  
+    <h3>About Me, The Food Man</h3><br>
+    <img src="https://www.taalrestaurant.co.uk/taal/wp-content/uploads/2019/04/taal_luxury_food900.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <div class="w3-padding-32">
+      <h4><b>I am Who I Am!</b></h4>
+      <h6><i>With Passion For Real, Good Food</i></h6>
+      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    </div>
+  </div>
+  <hr>
+  
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3>FOOD</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>COMMENT POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+        
+          <img src="https://www.vinedoha.com/resourcefiles/mainimages/aboutus-top.jpg?version=8102020075147" class="w3-left w3-margin-right" style="width:50px">
+          <a href='{% url "home" %}'class="w3-large">Lorem</a><br>
+          <span>Sed mattis nunc</span>
+          
+        </li>
+        <li class="w3-padding-16">
+          <img src="https://images.squarespace-cdn.com/content/v1/5a570d0bbe42d6ac5622fa54/1518432559589-VG25JN06Q29DZ67PKEW8/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/IMG_8928.jpg?format=2500w" class="w3-left w3-margin-right" style="width:50px">
+          <a href='{% url "home" %}'class="w3-large">Ipsum</a><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+{% endblock %} 

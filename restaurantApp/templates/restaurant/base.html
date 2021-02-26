@@ -1,0 +1,293 @@
+{% load static %}
+<html>
+
+<head>
+  <title>ITALIANHOUSE</title>
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  {% comment %} Jquery cdn {% endcomment %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style type="text/css">
+    .navbar {
+      background: black;
+    }
+
+    .navbar-inverse .navbar-nav>li>a {
+      font-family: Arial, Helvetica, sans-serif;
+      align-content: center;
+      color: #DAA520;
+    }
+    .yaser{
+
+      min-height: calc( 100vh - ( 80px + 129px ));
+    }
+
+    .reservation {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 100px;
+      color: #FFC11E;
+      text-align: center;
+      background: white no-repeat center;
+      background-size: cover;
+      background-color: black;
+    }
+
+    .reservation h2 {
+      font-family: "Cursive";
+      margin-top: 10px;
+    }
+
+    .arrow--reservation {
+      margin-top: 20px;
+    }
+
+    .reservation p {
+      margin-top: 20px;
+      margin-right: 17.5%;
+      margin-left: 17.5%;
+      font-size: 15px;
+      line-height: 1.625;
+    }
+
+    .button--reservation {
+      margin-top: 45px;
+    }
+
+    footer {
+      
+      width: 100%;
+      background-color: #231F20;
+      color: white;
+      text-align: center;
+      paddingBottom: 0;
+      height: 50px;
+      {% comment %} margin-top: -50px; {% endcomment %}
+
+    }
+
+    .footer-icons ul li {
+      display: inline-block;
+    }
+
+    .footer-icons ul li a {
+      border: 1px solid #444;
+      color: #444;
+      display: block;
+      font-size: 16px;
+      height: 40px;
+      line-height: 38px;
+      margin-right: 5px;
+      text-align: center;
+      width: 40px;
+      border-radius: 50%;
+    }
+
+    .fa {
+      align-items: center;
+      font-size: 23px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      height: 40px;
+      line-height: 38px;
+      margin-right: 5px;
+      text-align: center;
+      width: 40px;
+    }
+
+    .footer-icons {
+      text-align: center;
+    }
+
+    .footer-contacts p span {
+      color: #231F20;
+      font-weight: 700;
+    }
+
+    .popular-tag ul li {
+      display: inline-block;
+    }
+
+    .footer-content {
+      display: block;
+      overflow: hidden;
+      background: #231F20;
+    }
+
+    .popular-tag ul li a:hover,
+    .footer-icons ul li a:hover {
+      background: #d2a43ef5;
+      border: 1px solid #d2a43ef5;
+      color: #fff;
+    }
+
+    .popular-tag ul li a {
+      border: 1px solid #444;
+      border-radius: 30px;
+      color: white;
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      margin: 5px 3px;
+      padding: 5px 10px;
+      position: relative;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: all 0.4s ease 0s;
+      width: 70px;
+      text-align: center;
+    }
+
+    .footer-area-bottom {
+      background: white;
+      padding: 15px 0;
+    }
+
+    .copyright-text a:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    .copyright-text a {
+      color: white;
+    }
+
+    .copyright>p {
+      margin-bottom: 0;
+      color: white;
+    }
+
+    .credits {
+      padding-top: 5px;
+      text-align: center;
+    }
+
+    .credits a {
+      color: white;
+    }
+
+    .footer-area-bottom {
+      background: #231F20;
+      
+    }
+
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #948646;
+      border: none;
+      color: #000000;
+      text-align: center;
+      padding: 10px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;      
+      margin: 5px;
+      }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      font-weight:500;
+      font-size: 20px;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+      font-weight:600;
+      color : white ;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  </style>
+</head>
+<header class="base-header">
+  <nav class="fill basenavbar">
+    <section class="header-section">
+      <span><a href="{% url 'home' %}" style="color:#fff;">ITALIAN HOUSE</a></span>
+    </section>
+    <section class="header-section">
+      <ul>
+        <li class="home-nav-item"><a href="{% url 'home' %}" >Home</a></li>
+        <li class="menu-nav-item"><a href="{% url 'menu' %}">Menu</a></li>
+        <li class="booktable-nav-item"><a href="{% url 'bookTable' %}">Book Table</a></li>
+        <li class="aboutus-nav-item"><a href="{% url 'aboutUs' %}">About Us</a></li>
+      </ul>
+      <ul class="free-list-width"> </ul>
+      <ul class="nav navbar-nav navbar-right navbar-right-padding ">
+      {% if user.is_authenticated %}
+        <li ><a href="#"  class="dropdown-toggle" data-target="#dr" data-toggle="collapse"><span class="glyphicon glyphicon-user"></span> <span class="caret"></span></a>
+        <div id="dr" class="collapse  panel-collapse">
+          <ul  class=" dropdown-menu">
+             <li><a href="{% url 'editProfile' %}">Edit Profile</a></li>
+             <li><a href="{% url 'changePassword' %}">Change Password</a></li>
+             <li><a href="{% url 'myReservation' %}">My reservation </a></li>
+             <li><a href="/logout"> Logout </a></li>
+          </ul>
+          </div>
+        </li>
+        {% else %}
+        <button class="base-button" style="font-family: 'Quicksand', sans-serif;"><a href="/login">Login</a></button>
+        <button class="base-button" style="font-family: 'Quicksand', sans-serif;"><a href="/register">Sign Up</a></button>
+        {% endif %}
+      </ul>
+    </section>
+  </nav>
+
+</header>
+<div class="yaser">
+{% block content %}  {% endblock %}
+</div>
+<!-- Footer -->
+<footer>
+  <div class="footer-area-bottom">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="footer-icons">
+                      <ul>
+                          <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                          <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="credits">
+                      <a href="#">Privacy Policy</a> | <a href="#">Terms & Condition</a>
+                  </div>
+                  <div class="copyright text-center"> <p> &copy; Copyright 2021. Fire and Sparks team </p></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+</html>
